@@ -1,0 +1,36 @@
+<div class="container">
+    <table class="table table-bordered table-inverse table-dark">
+      <tr>
+        <th>Serial ID</th>
+        <th>Account ID</th>
+        <th>Product ID</th>
+        <th>Country</th>
+        <th>E-Mail</th>
+        <th>Phone no.</th>
+        <th class="text-right">Purchase Date</th>
+      </tr>
+      <tr *ngFor="let rprod of rprods">
+        <td>
+          <a [routerLink]="['/regprod-owl/view', rprod.id]">{{rprod.serialid}}</a>
+        </td>
+        <td>
+          {{rprod.customerid}}
+        </td>
+        <td>
+          {{rprod.refproductid}}
+        </td>
+        <td>
+            {{rprod.country}}
+        </td>
+        <td>
+            {{rprod.email}}
+        </td>
+        <td>
+            {{rprod.phone}}
+        </td>
+        <td class="text-right">
+          {{rprod.purchase_date}}
+        </td>
+      </tr>
+    </table>
+  </div>
